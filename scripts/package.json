@@ -1,0 +1,12 @@
+{
+  "name": "stonk-scripts",
+  "private": true,
+  "type": "commonjs",
+  "dependencies": {
+    "better-sqlite3": "^12.4.1"
+  },
+  "optionalDependencies": {
+    "tiktoken": "^1.0.22"
+  }
+}
+

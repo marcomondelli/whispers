@@ -63,15 +63,19 @@ Then print an aligned table and average % reduction.
 
 ### Results table (fill after running)
 
-| Task                           | Normal tokens | whispers tokens | Saved | %   |
-| ------------------------------ | ------------: | -------------: | ----: | --: |
-| React hooks explanation        |             — |              — |     — |   — |
-| Fix undefined variable (code)  |             — |              — |     — |   — |
-| Git merge vs rebase            |             — |              — |     — |   — |
-| CSS centering (code)           |             — |              — |     — |   — |
-| Node retry with backoff (code) |             — |              — |     — |   — |
-| SQL join explanation           |             — |              — |     — |   — |
-| Docker multi-stage build       |             — |              — |     — |   — |
+Groq sample run (model: `llama-3.1-8b-instant`):
+
+| Task                           | Normal tokens | whispers tokens | Saved | %    |
+| ------------------------------ | ------------: | -------------: | ----: | ---: |
+| React hooks explanation        |           578 |            465 |   113 |  20% |
+| Fix undefined variable (code)  |           216 |            257 |   -41 | -19% |
+| Git merge vs rebase            |           450 |            347 |   103 |  23% |
+| CSS centering (code)           |           301 |            383 |   -82 | -27% |
+| Node retry with backoff (code) |           615 |            595 |    20 |   3% |
+| SQL join explanation           |           636 |            145 |   491 |  77% |
+| Docker multi-stage build       |           491 |            454 |    37 |   8% |
+
+Average reduction: **20%** (this run).
 
 > **Transparency**: do not treat any % as universal. Savings depend heavily on task type (explanations compress more than code-only answers).
 
@@ -160,7 +164,7 @@ node run-free.js
 
 ## Related
 
-- [`bonsai`](../bonsai) — Cursor rules that reduce verbosity by default.
+- [`bonsai`](https://github.com/marcomondelli/bonsai) — Cursor rules that reduce verbosity by default.
 
 ## License
 
